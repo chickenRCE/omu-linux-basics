@@ -1,0 +1,4 @@
+#!/bin/bash
+cd "${0%/*}"
+
+bash --init-file init.sh -i -s

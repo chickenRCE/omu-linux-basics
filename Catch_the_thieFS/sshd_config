@@ -1,0 +1,9 @@
+UsePAM no
+
+Match User play
+	PasswordAuthentication yes
+	PermitEmptyPasswords yes
+	ChrootDirectory /
+	ForceCommand /home/play/game.py
+	DisableForwarding yes
+	MaxSessions 1

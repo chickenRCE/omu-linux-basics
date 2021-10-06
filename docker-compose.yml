@@ -1,0 +1,39 @@
+version: "3.3"
+
+services:
+  bento:
+    image: chickenrce/bento-xs:main
+  cat_flag:
+    build: ./cat_flag
+    ports:
+      - "10000:10000"
+    read_only: true
+  dog_flag:
+    build: ./dog_flag
+    ports:
+      - "10001:10000"
+    read_only: true
+  catch_the_thiefs:
+    build: ./Catch_the_thieFS
+    ports:
+      - "10002:22"
+    read_only: true
+  peekaboo_line:
+    build: ./peekaboo_nth_line
+    ports:
+      - "10003:10000"
+    read_only: true
+  peekaboo_column:
+    build: ./peekaboo_nth_column
+    ports:
+      - "10004:10000"
+    read_only: true
+  no_touch_no_see:
+    build: ./no_touch_no_see
+    ports:
+      - "10005:10000"
+    read_only: true
+  touch_no_see:
+    build: ./touch_no_see
+    ports:
+      - "10006:10000"

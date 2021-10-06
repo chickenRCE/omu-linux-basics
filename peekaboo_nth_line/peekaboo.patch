@@ -1,0 +1,21 @@
+diff --git a/ptrlib/pwn/proc.py b/ptrlib/pwn/proc.py
+index f7ad613..d873be9 100644
+--- a/ptrlib/pwn/proc.py
++++ b/ptrlib/pwn/proc.py
+@@ -191,11 +191,11 @@ class UnixProcess(Tube):
+         if isinstance(data, str):
+             data = str2bytes(data)
+ 
+-        try:
+-            self.proc.stdin.write(data)
+-            self.proc.stdin.flush()
+-        except IOError:
+-            logger.warning("Broken pipe")
++        #try:
++        self.proc.stdin.write(data)
++        self.proc.stdin.flush()
++        #except IOError:
++        #    raise EOFError
+ 
+     def close(self):
+         """Close the socket
